@@ -1,1 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
+@use "./assets/styles/variables" as var;
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  width: 100%;
+  padding: 20px 0px;
+  min-height: 600px;
+  background-color: var.$color-background;
+  color: var.$color-font;
+}
