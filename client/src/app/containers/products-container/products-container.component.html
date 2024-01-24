@@ -1,1 +1,25 @@
-<p>products-container works!</p>
+<section class="container">
+  <div class="container-details" *ngIf="productsSubject$ | async as products">
+    <div class="container-details-heading">
+      <span>
+        <h3>Invoice to:</h3>
+        <h3>Dwayne CLark</h3>
+        <p>24 Dummy Street Area, New York</p>
+      </span>
+      <span>
+        <h3>Invoice# 52148</h3>
+        <h3>Date: 01/02/2023</h3>
+      </span>
+    </div>
+    <div class="container-details-body">
+      <app-products-table [products]="products"></app-products-table>
+      <app-products-total
+        [products]="products"
+        [domesticProducts]="domesticProducts"
+        [importedProducts]="importedProducts"
+        [domesticCost]="domesticCost"
+        [importedCost]="importedCost"
+      ></app-products-total>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,60 @@
-<p>products-table works!</p>
+<div class="products-table">
+  <table class="products-table-domestic">
+    <thead>
+      <tr>
+        <th colspan="4">Domestic :</th>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Weight</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <ng-container *ngIf="product.domestic">
+          <td>{{ product.name }}</td>
+          <td>
+            {{
+              product.description.length > 10
+                ? product.description.slice(0, 10) + "..."
+                : product.description
+            }}
+          </td>
+          <td>{{ product?.weight ? product.weight : "N/A" }}</td>
+          <td>$ {{ product.price }}</td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+  <table class="products-table-imported">
+    <thead>
+      <tr>
+        <th colspan="4">Imported :</th>
+      </tr>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Weight</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <ng-container *ngIf="!product.domestic">
+          <td>{{ product.name }}</td>
+          <td>
+            {{
+              product.description.length > 10
+                ? product.description.slice(0, 10) + "..."
+                : product.description
+            }}
+          </td>
+          <td>{{ product?.weight ? product.weight : "N/A" }}</td>
+          <td>$ {{ product.price }}</td>
+        </ng-container>
+      </tr>
+    </tbody>
+  </table>
+</div>
