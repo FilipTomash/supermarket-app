@@ -1,0 +1,44 @@
+@use "../../../assets/styles/variables" as var;
+
+.header {
+  min-height: 100px;
+  padding: 20px;
+  background-color: var.$color-background;
+  color: var.$color-background;
+  display: grid;
+  grid-template-columns: 10fr 1fr 8fr;
+  overflow: hidden;
+  &-title {
+    font-size: 20px;
+    background: var.$color-gradient;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -15px;
+    height: 80px;
+    transform: skew(-20deg);
+    > h1 {
+      display: inline-block;
+      transform: skew(20deg);
+    }
+  }
+  &-brand {
+    font-size: 18px;
+    background: var.$color-gradient;
+    margin-right: -50px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 80px;
+    transform: skew(-20deg);
+    > h1 {
+      display: inline-block;
+      transform: skew(20deg);
+      i {
+        font-size: 38px;
+        padding: 10px;
+      }
+    }
+  }
+}

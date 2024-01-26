@@ -1,0 +1,39 @@
+@use "../../../assets/styles/variables" as var;
+
+.footer {
+  background-color: var.$color-background;
+  display: grid;
+  grid-template-columns: 5fr 2fr 7fr;
+  grid-auto-flow: column;
+  overflow: hidden;
+  &-copyrights {
+    background: var.$color-gradient;
+    transform: skew(-20deg);
+    small {
+      color: rgb(56, 56, 59);
+      display: inline-block;
+      transform: skew(20deg);
+    }
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+  }
+  &-middle {
+    background: var.$color-gradient;
+    opacity: 70%;
+    margin-left: -50px;
+    margin-top: 40px;
+    transform: skew(-20deg);
+    height: 20px;
+  }
+  &-end {
+    background: var.$color-gradient;
+    opacity: 70%;
+    margin: 0 -20px;
+    transform: skew(-20deg);
+    height: 60px;
+  }
+}

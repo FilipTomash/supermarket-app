@@ -1,0 +1,50 @@
+@use "../../../assets/styles/variables" as var;
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 10px;
+  &-details {
+    padding: 30px;
+    border: 1px lightgrey solid;
+    background-color: var.$color-primary;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    height: fit-content;
+    width: fit-content;
+    &-heading {
+      width: 100%;
+      margin: 12px;
+      padding-top: 40px;
+      align-items: flex-start;
+      justify-items: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      > span {
+        padding-left: 30px;
+
+        h3 {
+          padding: 6px;
+        }
+        p {
+          padding: 6px;
+        }
+      }
+    }
+    &-body {
+      padding: 20px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 16px;
+      height: fit-content;
+      width: fit-content;
+    }
+  }
+}
