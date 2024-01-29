@@ -5,6 +5,9 @@ import { StatusCode } from "../utils/index";
 
 export const productsRouter = express.Router();
 
+// Using express router to define a get route, then calling the loadProducts function to get the data.
+// Throwing correspondig errors if we don't get the requested data, or returning the data it if the response was a success.
+
 productsRouter.get("/products", async (req: Request, res: Response) => {
   try {
     const products: Product[] | undefined = await productsDB.loadProducts();

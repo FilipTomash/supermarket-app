@@ -23,6 +23,8 @@ export class ProductsContainerComponent implements OnInit {
     this.getImportedInfo();
   }
 
+  // Filtering the data to get only the domestic products and their cost and assinging it to variables
+
   getDomesticInfo() {
     this.productsSubject$
       .pipe(
@@ -37,6 +39,8 @@ export class ProductsContainerComponent implements OnInit {
         this.domesticProducts = value;
       });
   }
+
+  // Filtering the data to get only the imported products and their cost and assinging it to variables
 
   getImportedInfo() {
     this.productsSubject$

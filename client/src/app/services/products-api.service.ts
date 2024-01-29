@@ -10,6 +10,9 @@ import { BASE_URL } from '../constants/constants';
 export class ProductsApiService {
   constructor(private http: HttpClient) {}
 
+  // Fetching the data from our backend api, using angulars HttpClient
+  // the function returns an Observable on which we can subscribe later on in the products service
+
   fetchProducts(): Observable<Product[]> {
     return this.http
       .get(`${BASE_URL}/products`)

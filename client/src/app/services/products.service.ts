@@ -11,6 +11,8 @@ export class ProductsService {
 
   constructor(private productsApiService: ProductsApiService) {}
 
+  // Calling the fetchProducts of the client api-service and then sorting the data once we get it
+
   getProducts() {
     this.productsApiService
       .fetchProducts()
@@ -21,6 +23,7 @@ export class ProductsService {
           );
         })
       )
+      // nexting or emmiting the sorted data via the behavior subject
       .subscribe({
         next: (value) => {
           this.productsSubject$.next(value);

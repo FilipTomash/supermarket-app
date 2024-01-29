@@ -1,27 +1,32 @@
-# Client
+# Supermarket Receipt Analyzer - Frontend (Client)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+## Overview
 
-## Development server
+Welcome to the frontend (client) part of the Supermarket Receipt Analyzer project. This is an Angular application that provides an interactive interface to visualize and explore supermarket receipt data retrieved from the backend API.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- Built with Angular and TypeScript.
+- Utilizes smart and dumb components for a modular structure.
+- Interacts with the backend API to fetch and display receipt data.
+- User-friendly design.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Folder Structure
 
-## Build
+- **components:** Contains components used for displaying the layout.
+- **containers:** Includes smart components.
+- **services:** Manages API calls and CRUD operations.
+- **interfaces:** Defines data interfaces.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Installation
 
-## Running unit tests
+1. Clone this repository.
+2. Navigate to the client directory.
+3. Run `npm install` to install dependencies.
+4. Run `ng serve` to start the Angular server.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Usage
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Ensure the backend API is running.
+2. Open a browser and navigate to the Angular server (default: http://localhost:4200/).
+3. Interact with the frontend to visualize and explore supermarket receipt data.
